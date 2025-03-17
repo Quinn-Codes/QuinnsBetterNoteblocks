@@ -1,0 +1,2 @@
+execute as @e[type=text_display,tag=nb_marker] at @s unless block ~ ~-1 ~ minecraft:note_block run function quinnsbetternoteblocks:gamelogic/note_block_broken
+schedule function quinnsbetternoteblocks:cleanup 5s
