@@ -1,7 +1,4 @@
 # QuinnsBetterNoteblocks
-<<<<<<< Updated upstream
- A datapack/resourcepack that adds better functionality in noteblocks in Vanilla minecraft, such as noteblock editing tools, more octaves, etc.
-=======
 A vanilla friendly datapack/resourcepack that adds better functionality to noteblocks in Vanilla minecraft, such as noteblock editing tools, more octaves, etc.
 
 If you've ever tried to make a jingle or a song using noteblocks but gave up because Minecraft's noteblocks can't pitch high or low enough, this project is for you! While vanilla Minecraft only supports 2 octaves, QuinnsBetterNoteblocks adds support for 8 octaves, which is more than enough to create any song! This pack is fully vanilla-friendly and only requires the installation of a resourcepack and a datapack.
@@ -64,4 +61,3 @@ Use these instructions if you are a server owner and would like to add QuinnsBet
 ## Known Bugs
 - Better Noteblocks have an extra 1 tick delay
 	- As far as I know, there is no way around this due to how the datapack commands execute
->>>>>>> Stashed changes
