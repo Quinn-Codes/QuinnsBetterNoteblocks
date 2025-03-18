@@ -61,6 +61,7 @@ def make_instruments():
 
             # For each note,
             for n in range (0, 25):
+                commands += f"# NOTE {n}\n"
                 # Make a command for that note for the current octave
                 note = NOTES[n%len(NOTES)]
                 if note == "c":
@@ -68,6 +69,7 @@ def make_instruments():
                 if o > 8:
                     o -= 8
                 commands += f"execute if block ~ ~ ~ minecraft:note_block[note={n}] run playsound quinnsbetternoteblocks:{i}.o{o}.{note} record @a[distance=..48] ~ ~ ~ 3\n"
+                commands += f"execute if block ~ ~ ~ minecraft:note_block[note={n}] run execute align y run particle minecraft:note ~ ~1.25 ~ {0.04167*n} 0 0 1 0\n"
 
             # Write to the octave-range file
             print(f"Writing {filename}...")

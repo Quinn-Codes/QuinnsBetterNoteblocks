@@ -18,7 +18,9 @@ def buildToGame():
     #commandbuilder.make_instruments()
 
     # Import into game
+    print('Copying resourcepack')
     shutil.copytree(r"\\?\\" + os.path.abspath(RP_DIRECTORY), r"\\?\\" + os.path.join(MC_DIRECTORY,"resourcepacks","QuinnsBetterNoteblocks_resourcepack"), dirs_exist_ok=True)
+    print('Copying datapack')
     shutil.copytree(r"\\?\\" + os.path.abspath(DP_DIRECTORY), r"\\?\\" + os.path.join(MC_DIRECTORY,"saves",MC_SAVE,"datapacks","QuinnsBetterNoteblocks_datapack"), dirs_exist_ok=True)
 
     print("Build completed successfully!")
