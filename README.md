@@ -83,4 +83,3 @@ Use this to unlock the potential of Better Noteblocks! Shift + Right Click conve
 ## Known Bugs
 - Better Noteblocks have an extra 1 tick delay
 	- As far as I know, there is no way around this due to how the datapack commands execute
-- The wrench is initially crafted as "Tuning Wrench" even though it should say "Octave Wrench"
