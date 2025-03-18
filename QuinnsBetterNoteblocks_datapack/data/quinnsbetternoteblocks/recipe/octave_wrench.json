@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "L": "minecraft:lightning_rod",
+    "A": "minecraft:amethyst_shard",
+    "S": "minecraft:sculk_catalyst",
+    "N": "minecraft:note_block"
+  },
+  "pattern": ["L A", " S ", " N "],
+  "result": {
+    "components": {
+      "minecraft:item_model": "quinnsbetternoteblocks:tuning_wrench",
+      "minecraft:unbreakable": {
+        "show_in_tooltip": false
+      },
+      "minecraft:item_name": "\"Octave Wrench\"",
+      "minecraft:lore": [
+        "{\"text\":\"Shift+Right-Click on noteblock to upgrade it\",\"italic\":true,\"color\":\"dark_gray\",\"bold\":false}",
+        "{\"text\":\"Shift+Right-Click anything else to change modes\",\"italic\":true,\"color\":\"dark_gray\",\"bold\":false}",
+        "{\"text\":\" \"}",
+        "{\"text\":\"Mode: \",\"italic\":false,\"color\":\"blue\",\"bold\":true,\"extra\":[{\"text\":\"Octave\",\"italic\":false,\"color\":\"dark_aqua\",\"bold\":true}]}",
+        "{\"text\":\"Left-Click decreases octave\",\"italic\":false,\"color\":\"dark_aqua\",\"bold\":false}",
+        "{\"text\":\"Right-Click increases octave\",\"italic\":false,\"color\":\"dark_aqua\",\"bold\":false}",
+        "{\"text\":\"Shift+Left-Click plays current note\",\"italic\":false,\"color\":\"dark_aqua\",\"bold\":false}"
+      ],
+      "minecraft:custom_data": {
+        "wrench_state": "Octave"
+      }
+    },
+    "count": 1,
+    "id": "minecraft:carrot_on_a_stick"
+  }
+}

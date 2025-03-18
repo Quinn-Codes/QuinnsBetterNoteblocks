@@ -12,7 +12,7 @@ def make_nb_powered():
     # Add commands for triggering each instrument
     for i in INSTRUMENTS.keys():
         commands += f"# {i.upper()}\n"
-        commands += f"execute if block ~ ~-1 ~ minecraft:note_block[instrument={i}] run function quinnsbetternoteblocks:gamelogic/sound_activation/instruments/{i}/{i}_powered\n\n"
+        commands += f"execute if block ~ ~ ~ minecraft:note_block[instrument={i}] run function quinnsbetternoteblocks:gamelogic/sound_activation/instruments/{i}/{i}_powered\n\n"
 
     # Filename for nb_powered logic
     filename = 'nb_powered.mcfunction'
@@ -67,7 +67,7 @@ def make_instruments():
                     o += 1
                 if o > 8:
                     o -= 8
-                commands += f"execute if block ~ ~-1 ~ minecraft:note_block[note={n}] run playsound quinnsbetternoteblocks:{i}.o{o}.{note} record @a[distance=..48] ~ ~ ~ 3\n"
+                commands += f"execute if block ~ ~ ~ minecraft:note_block[note={n}] run playsound quinnsbetternoteblocks:{i}.o{o}.{note} record @a[distance=..48] ~ ~ ~ 3\n"
 
             # Write to the octave-range file
             print(f"Writing {filename}...")

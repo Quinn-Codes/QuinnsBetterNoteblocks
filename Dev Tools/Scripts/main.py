@@ -9,13 +9,13 @@ import shutil
 
 def buildToGame():
     # Resource pack methods
-    soundbuilder.build_sound_files()
-    soundbuilder.boost_volume(boost_percent=100)
-    soundbuilder.make_sound_json(True)
+    #soundbuilder.build_sound_files()
+    #soundbuilder.boost_volume(boost_percent=100)
+    #soundbuilder.make_sound_json(True)
 
     # Datapack methods
-    commandbuilder.make_nb_powered()
-    commandbuilder.make_instruments()
+    #commandbuilder.make_nb_powered()
+    #commandbuilder.make_instruments()
 
     # Import into game
     shutil.copytree(r"\\?\\" + os.path.abspath(RP_DIRECTORY), r"\\?\\" + os.path.join(MC_DIRECTORY,"resourcepacks","QuinnsBetterNoteblocks_resourcepack"), dirs_exist_ok=True)

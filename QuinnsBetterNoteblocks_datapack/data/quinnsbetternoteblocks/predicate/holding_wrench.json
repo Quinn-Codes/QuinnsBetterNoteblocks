@@ -2,13 +2,9 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "flags": {
-      "is_sneaking": true
-    },
     "equipment": {
       "mainhand": {
         "items": "minecraft:carrot_on_a_stick",
-        "count": 1,
         "components": {
           "minecraft:item_model": "quinnsbetternoteblocks:tuning_wrench"
         }

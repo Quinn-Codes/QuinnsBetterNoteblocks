@@ -1,0 +1,28 @@
+[
+    {
+      "function": "minecraft:set_lore",
+      "lore": [
+        {"text":"Shift+Right-Click on noteblock to upgrade it","italic":true,"color":"dark_gray","bold":false},
+        {"text":"Shift+Right-Click anything else to change modes","italic":true,"color":"dark_gray","bold":false},
+        {"text":" "},
+        {"text":"Mode: ","italic":false,"color":"blue","bold":true,"extra":[{"text":"Tuning","italic":false,"color":"dark_green","bold":true}]},
+        {"text":"Left-Click decreases note","italic":false,"color":"dark_green","bold":false},
+        {"text":"Right-Click increases note","italic":false,"color":"dark_green","bold":false},
+        {"text":"Shift+Left-Click plays current note","italic":false,"color":"dark_green","bold":false},
+        {"text":"Shift+Right-Click increases note by 4","italic":false,"color":"dark_green","bold":false}
+      ],
+      "mode": "replace_all"
+    },
+    {
+      "function": "minecraft:set_custom_data",
+      "tag": {
+        "wrench_state": "Tuning"
+      },
+      "conditions": []
+    },
+    {
+      "function": "minecraft:set_name",
+      "name": "Tuning Wrench",
+      "target": "item_name"
+    }
+  ]

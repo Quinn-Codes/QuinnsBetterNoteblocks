@@ -1,0 +1,27 @@
+[
+    {
+      "function": "minecraft:set_lore",
+      "lore": [
+        {"text":"Shift+Right-Click on noteblock to upgrade it","italic":true,"color":"dark_gray","bold":false},
+        {"text":"Shift+Right-Click anything else to change modes","italic":true,"color":"dark_gray","bold":false},
+        {"text":" "},
+        {"text":"Mode: ","italic":false,"color":"blue","bold":true,"extra":[{"text":"Octave","italic":false,"color":"dark_aqua","bold":true}]},
+        {"text":"Left-Click decreases octave","italic":false,"color":"dark_aqua","bold":false},
+        {"text":"Right-Click increases octave","italic":false,"color":"dark_aqua","bold":false},
+        {"text":"Shift+Left-Click plays current note","italic":false,"color":"dark_aqua","bold":false}
+      ],
+      "mode": "replace_all"
+    },
+    {
+      "function": "minecraft:set_custom_data",
+      "tag": {
+        "wrench_state": "Octave"
+      },
+      "conditions": []
+    },
+    {
+      "function": "minecraft:set_name",
+      "name": "Octave Wrench",
+      "target": "item_name"
+    }
+  ]

@@ -1,14 +1,17 @@
-execute as @a[scores={tuning_wrench_useR=1..}] if predicate quinnsbetternoteblocks:shift_holding_wrench run function quinnsbetternoteblocks:actions/wrench_used
+# Executing at every player that is holding a wrench, grow nearby interaction entities
+execute as @a at @s if predicate quinnsbetternoteblocks:holding_wrench run execute as @e[type=minecraft:interaction,distance=..7,tag=nb_interaction,tag=inactive] at @s run function quinnsbetternoteblocks:gamelogic/interactions/interaction_grow
 
-execute as @e[type=text_display,tag=nb_marker] at @s if block ~ ~-1 ~ minecraft:note_block[powered=true] unless entity @s[tag=activated] run function quinnsbetternoteblocks:gamelogic/nb_powered
+# Big interaction boxes trigger every tick to check for clicks
+execute as @e[type=minecraft:interaction,tag=nb_interaction,tag=active] run function quinnsbetternoteblocks:gamelogic/interactions/interaction_tick
 
-execute as @e[type=text_display,tag=nb_marker] at @s unless block ~ ~-1 ~ minecraft:note_block[powered=true] run tag @s remove activated
-# For each item frame with a written book titled "Octave1":
-#execute as @e[type=item_frame] at @s if predicate quinnsbetternoteblocks:written_book_octave5 unless block ~ ~-1 ~ minecraft:air if block ~ ~-2 ~ minecraft:note_block[powered=true] unless entity @s[tag=activated] run function quinnsbetternoteblocks:octave5_on
-#execute as @e[type=item_frame] at @s if predicate quinnsbetternoteblocks:written_book_octave1 unless block ~ ~-1 ~ minecraft:air if block ~ ~-2 ~ minecraft:note_block[powered=true] unless entity @s[tag=activated] run function quinnsbetternoteblocks:octave1_on
+# Upgrade wrench action (shift+right click on non-upgraded note block) starts raycast
+execute as @a[scores={tuning_wrench_useR=1..}] if predicate quinnsbetternoteblocks:holding_wrench if predicate quinnsbetternoteblocks:holding_shift run function quinnsbetternoteblocks:actions/upgrade/wrench_upgrade
 
-# Remove the activated tag when the note block is not powered,
-# so the rising edge can be detected again later:
-#execute as @e[type=item_frame] at @s if predicate quinnsbetternoteblocks:written_book_octave5 unless block ~ ~-2 ~ minecraft:note_block[powered=true] run tag @s remove activated
-#execute as @e[type=item_frame] at @s if predicate quinnsbetternoteblocks:written_book_octave1 unless block ~ ~-2 ~ minecraft:note_block[powered=true] run tag @s remove activated
+# Check for powered note blocks and activate them
+execute as @e[type=interaction,tag=nb_interaction] at @s if block ~ ~ ~ minecraft:note_block[powered=true] unless entity @s[tag=activated] run function quinnsbetternoteblocks:gamelogic/nb_powered
+
+# Check for unpowered noteblocks and allow them to trigger again
+execute as @e[type=interaction,tag=nb_interaction,tag=activated] at @s unless block ~ ~ ~ minecraft:note_block[powered=true] run tag @s remove activated
+
+# Clear wrench use score
 scoreboard players set @a[scores={tuning_wrench_useR=1..}] tuning_wrench_useR 0
