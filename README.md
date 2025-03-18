@@ -13,22 +13,6 @@ If you've ever tried to make a jingle or a song using noteblocks but gave up bec
 
 HIGHLY Recommended that you combine this with Vanilla Tweaks' [Visual Note Block Pitch](https://vanillatweaks.net/share#QB1Nyy)
 
-## Installation
-### Singleplayer
-1. Navigate to your [.minecraft](https://minecraft.fandom.com/wiki/.minecraft) folder
-2. Drop ``QuinnsBetterNoteblocks_resourcepack.zip`` into the ``resourcepacks`` folder
-3. Open ``saves``
-4. Open the world you want to add it to
-5. Drop ``QuinnsbetterNoteblocks_datapack.zip`` into the ``datapacks`` folder
-6. Make sure you equip the resourcepack
-
-### Multiplayer
-Use these instructions if you are a server owner and would like to add QuinnsBetterNoteblocks to your server so any player can use it.
-1. In your server, open the ``world`` folder
-2. Move ``QuinnsbetterNoteblocks_datapack.zip`` into the ``datapacks`` folder
-3. Upload ``QuinnsBetterNoteblocks_resourcepack.zip`` to a resource pack hosting website like https://mc-packs.net
-4. Open your ``server.properties`` file and fill in the ``resource-pack=`` field with the download link and the ``resource-pack-sha1=`` field with the SHA-1 Hash. (if you use https://mc-packs.net these fields are auto-generated for you)
-
 ## Features
  - Change the octave of noteblocks
  - Custom tuning wrench item
@@ -72,6 +56,24 @@ Use this to unlock the potential of Better Noteblocks! Shift + Right Click conve
 	- Wrench will change textures to signify active mode
 	- Noteblock texture with note info on it (use Vanilla Tweaks' [Visual Note Block Pitch](https://vanillatweaks.net/share#QB1Nyy) to get this feature)
 - Potentially: more instruments
+
+## Installation
+### Singleplayer
+1. Download the latest release from [Releases](https://github.com/Quinn-Codes/QuinnsBetterNoteblocks/releases)
+2. Navigate to your [.minecraft](https://minecraft.fandom.com/wiki/.minecraft) folder
+3. Drop ``QuinnsBetterNoteblocks_resourcepack`` into the ``resourcepacks`` folder
+4. Open ``saves``
+5. Open the world you want to add it to
+6. Drop ``QuinnsbetterNoteblocks_datapack`` into the ``datapacks`` folder
+7. Make sure you equip the resourcepack
+
+### Multiplayer
+Use these instructions if you are a server owner and would like to add QuinnsBetterNoteblocks to your server so any player can use it.
+1. Download the latest release from [Releases](https://github.com/Quinn-Codes/QuinnsBetterNoteblocks/releases)
+2. In your server, open the ``world`` folder
+3. Move ``QuinnsbetterNoteblocks_datapack`` into the ``datapacks`` folder
+4. Upload ``QuinnsBetterNoteblocks_resourcepack`` to a resource pack hosting website like https://mc-packs.net
+5. Open your ``server.properties`` file and fill in the ``resource-pack=`` field with the download link and the ``resource-pack-sha1=`` field with the SHA-1 Hash. (if you use https://mc-packs.net these fields are auto-generated for you)
 
 ## FAQ
 - Q: Why both a datapack and a resourcepack?
