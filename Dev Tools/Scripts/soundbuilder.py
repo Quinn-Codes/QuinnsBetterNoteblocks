@@ -11,59 +11,46 @@ from config import RP_DIRECTORY
 
 def build_sound_files():
     shifted_notes = ['c', 'csharp', 'd', 'dsharp', 'e', 'f', 'fsharp', 'g', 'gsharp', 'a', 'asharp', 'b']
+    # For each instrument...
     for i in INSTRUMENTS.keys():
-        # Base sample information: F#4
+        # Get the instrument's base octave, note, and determine its position in the list
         base_octave = INSTRUMENTS[i]
         base_note = "fsharp"
         base_note_position = 12 * (base_octave - 1) + shifted_notes.index(base_note)
-        #base_note_index = NOTES.index(base_note)  # F# has index 6
-        #base_abs = base_octave * 12 + base_note_index  # Absolute pitch of F#base_octave
 
-        # Define the lower and upper bounds in absolute semitones:
-        # F#1 and F#8 based on our note indexing
-        #lower_bound = 1 * 12 + NOTES.index("fsharp")  # F#1 = 1*12 + 6 = 18
-        #upper_bound = 8 * 12 + NOTES.index("fsharp")    # F#8 = 8*12 + 6 = 102
-
-        # Input file: The sample of F#4
+        # Get the input file for this instrument and sample rate
         input_file = f"Assets/Original Sounds/Note_block_{i}.ogg"
+        sample_rate = get_sample_rate(input_file)
 
         # Iterate over octaves 1 through 8
         for o in range(1, 9):
-            os.makedirs(os.path.join(RP_DIRECTORY, f"assets/quinnsbetternoteblocks/sounds/{i}/o{o}"), exist_ok=True)
-            # Iterate over each note in the chromatic scale
+            # Iterate over each note to be generated
             for n in shifted_notes:
-                #note_index = NOTES.index(n)
-                # Calculate the absolute semitone value for this note in the current octave
-                #note_abs = o * 12 + note_index
-
-                # Skip notes that fall outside the desired range F#1 to F#8
-                #if note_abs < lower_bound or note_abs > upper_bound:
-                    #continue
-
-                # Compute the semitone difference relative to F#4
-                #semitone_diff = note_abs - base_abs
-                # Convert semitone difference to cents (100 cents per semitone)
-                #shift_cents = semitone_diff * 100
-
-                # Output filename
+                # Skip if the note is outside minecraft's note block range
                 if ((o == 1) and (n in ['c', 'csharp', 'd', 'dsharp', 'e', 'f'])) or ((o == 8) and (n in ['g', 'gsharp', 'a', 'asharp', 'b'])):
                     continue
 
+                # Generate output filepath
                 output_filename = f"{i}_o{o}_{n}.ogg"
                 output_path = os.path.join(RP_DIRECTORY, f"assets/quinnsbetternoteblocks/sounds/{i}/o{o}", output_filename)
                 os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
-                # Old SoX command
-                #cmd = ["sox", input_file, os.path.join(RP_DIRECTORY, f"assets/sounds/{i}/o{o}"), "pitch", str(shift_cents)]
-                # Use FFmpeg to pitch up files
+                # Using FFmpeg to pitch up files
+
+                # Find the position of the current note and its distance from the base note
                 n_pos = 12 * (o-1) + shifted_notes.index(n)
                 shift = n_pos - base_note_position
                 print(f'Distance from base note {base_note}{base_octave} at {base_note_position} and note {n}{o} at {n_pos} is {shift}')
-                cmd = ["ffmpeg", "-y", "-i", input_file, "-af", f'asetrate=44100*pow(2\\,{shift}/12),aresample=44100', output_path]
-                print(f"Generating {output_filename}: shifting by {shift} semitone(s)")
 
-                # Run the FFmpeg command
-                subprocess.run(cmd, check=True)
+                # Calculate the pitch shift and the filter
+                pitch_shift = pow(2, shift/12)
+                filter = f"asetrate={sample_rate}*{pitch_shift},aresample={sample_rate}"
+
+                # Construct the fmmpeg command and run it
+                print(f"Generating {output_filename}: shifting by {shift} semitone(s) (pitch shift of {pitch_shift}, sample rate of {sample_rate})")
+                cmd = ["ffmpeg", "-y", "-i", input_file, "-filter:a", filter, output_path]
+                subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                
 
     print("All samples generated.")
 
@@ -123,3 +110,27 @@ def make_sound_json(overwrite=False):
         print("Writing en_us.json...")
         with open(os.path.join(RP_DIRECTORY, "assets/quinnsbetternoteblocks/lang", "en_us.json"), "w") as json_file:
             json.dump(json.loads(subtitles), json_file)
+
+# Gets the sample rate of a given file using ffprobe
+def get_sample_rate(file_path):
+    result = subprocess.run(
+        [
+            "ffprobe", 
+            "-v", "error",
+            "-select_streams", "a:0",
+            "-show_entries", "stream=sample_rate",
+            "-of", "default=noprint_wrappers=1:nokey=1",
+            file_path
+        ],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True
+    )
+    
+    if result.returncode != 0:
+        raise RuntimeError(f"ffprobe error: {result.stderr}")
+    
+    try:
+        return int(result.stdout.strip())
+    except ValueError:
+        raise ValueError(f"Unexpected output: {result.stdout}")

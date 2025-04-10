@@ -86,3 +86,4 @@ Use these instructions if you are a server owner and would like to add QuinnsBet
 ## Known Bugs
 - Better Noteblocks have an extra 1 tick delay
 	- As far as I know, there is no way around this due to how the datapack commands execute
+- The following instruments are tuned 1 note off for an unknown reason (vanilla's F# is their G): Bell, Flute, Chime, Guitar, Xylophone, Iron Xylophone, Cowbell, Didgeridoo, Bit, Banjo

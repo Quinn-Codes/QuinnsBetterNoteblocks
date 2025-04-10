@@ -9,9 +9,9 @@ import shutil
 
 def buildToGame():
     # Resource pack methods
-    #soundbuilder.build_sound_files()
+    soundbuilder.build_sound_files()
     #soundbuilder.boost_volume(boost_percent=100)
-    #soundbuilder.make_sound_json(True)
+    soundbuilder.make_sound_json(True)
 
     # Datapack methods
     #commandbuilder.make_nb_powered()

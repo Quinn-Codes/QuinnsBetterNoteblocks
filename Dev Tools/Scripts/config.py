@@ -8,7 +8,6 @@ MC_SAVE = "Redstone Testing"
 RP_DIRECTORY = "../QuinnsBetterNoteblocks_resourcepack"
 DP_DIRECTORY = "../QuinnsBetterNoteblocks_datapack"
 # The names of the instruments to be used, plus their octaves
-#INSTRUMENTS = ["harp", "bass", "snare", "hat", "basedrum", "bell", "flute", "chime", "guitar", "xylophone", "cow_bell", "didgeridoo", "bit", "banjo", "pling"]
 INSTRUMENTS = {
     "harp": 4,
     "bass": 3,
@@ -27,5 +26,4 @@ INSTRUMENTS = {
     "banjo": 5,
     "pling": 5
 }
-INSTR_STARTING_OCTAVE = [4, 2, 4, 4, 4, 6, 5, 6, 3, 6, 4, 5, 2, 4, 4, 4]
 NOTES = ['fsharp', 'g', 'gsharp', 'a', 'asharp', 'b', 'c', 'csharp', 'd', 'dsharp', 'e', 'f']
