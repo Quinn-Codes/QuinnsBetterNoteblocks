@@ -3,13 +3,13 @@
 
 A vanilla friendly datapack/resourcepack that adds better functionality to noteblocks in Vanilla minecraft, such as noteblock editing tools, more octaves, etc.
 
-If you've ever tried to make a jingle or a song using noteblocks but gave up because Minecraft's noteblocks can't pitch high or low enough, this project is for you! While vanilla Minecraft only supports 2 octaves, QuinnsBetterNoteblocks adds support for 8 octaves, which is more than enough to create any song! This pack is fully vanilla-friendly and only requires the installation of a resourcepack and a datapack.
+If you've ever tried to make a jingle or a song using noteblocks but gave up because Minecraft's noteblocks can't pitch high or low enough, this project is for you! While vanilla Minecraft only supports 2 octaves, QuinnsBetterNoteblocks adds support for 9 octaves, which is more than enough to create any song! This pack is fully vanilla-friendly and only requires the installation of a resourcepack and a datapack.
 
 |                |Vanilla Minecraft              |QuinnsBetterNoteblocks       |
 |----------------|-------------------------------|-----------------------------|
-|Octaves         | 2                             | 8                           | 
+|Octaves         | 2                             | 9                           | 
 |Instruments     | 16                            | 16 (more coming!)           | 
-|Total Notes     | 400                           | 1,536                       |
+|Total Notes     | 400                           | 1,728                       |
 
 HIGHLY Recommended that you combine this with Vanilla Tweaks' [Visual Note Block Pitch](https://vanillatweaks.net/share#QB1Nyy)
 
@@ -18,15 +18,17 @@ HIGHLY Recommended that you combine this with Vanilla Tweaks' [Visual Note Block
  - Custom tuning wrench item
 	- Shift + Right Clicking on non-note block changes mode
 	- Shift + Right Clicking on note block upgrades noteblock
-	- Octave Mode
-		- Left Click decreases octave
-		- Shift + Left Click plays current note
-		- Right Click increases octave
 	- Tuning Mode
 		- Left Click decreases note
-		- Shift + Left Click plays current note
 		- Right Click increases note
-		- Shift + Right Click increases note by 4
+		- Shift + Left Click decreases octave
+		- Shift + Right Click increases octave
+	- Clipboard Mode
+		- Left Click plays note
+		- Shift + Left Click pastes a random note
+		- Right Click pastes into note block
+		- Shift + Right Click copies note block
+		- Placing noteblock from offhand pastes into it
 
 ### 4x Note Block Pitch Range
 Vanilla's Range             |  Quinns Better Noteblocks Range
@@ -37,23 +39,15 @@ Vanilla's Range             |  Quinns Better Noteblocks Range
 Use this to unlock the potential of Better Noteblocks! Shift + Right Click converts any regular note block into an upgraded one.
 #### Recipe
 !['Recipe'](/Dev%20Tools/Assets/recipe.png)
-#### Octave Mode
+#### Octave Mode (deprecated)
 !['Octave Mode'](/Dev%20Tools/Assets/octave_mode.png)
 #### Tuning Mode
 !['Tuning Mode'](/Dev%20Tools/Assets/tuning_mode.png)
 
 ## Planned Features
-- More features for the tuning fork such as
-	- Copy/Paste Mode
-		- Left Click pastes into note block
-		- Shift + Left Click copies note block
-		- Right Click with note block in offhand to paste settings into placed note block
-		- Shift + Right Click with note block in offhand to paste settings into placed note block + 1 note
 - Custom paintings that provide informational note block posters (like chords, notes, etc)
-- More feedback for what note is playing when using wrench
 - Updated visuals
 	- Custom model on top of the noteblock to signify upgrade
-	- Wrench will change textures to signify active mode
 	- Noteblock texture with note info on it (use Vanilla Tweaks' [Visual Note Block Pitch](https://vanillatweaks.net/share#QB1Nyy) to get this feature)
 - Potentially: more instruments
 
@@ -86,4 +80,4 @@ Use these instructions if you are a server owner and would like to add QuinnsBet
 ## Known Bugs
 - Better Noteblocks have an extra 1 tick delay
 	- As far as I know, there is no way around this due to how the datapack commands execute
-- The following instruments are tuned 1 note off for an unknown reason (vanilla's F# is their G): Bell, Flute, Chime, Guitar, Xylophone, Iron Xylophone, Cowbell, Didgeridoo, Bit, Banjo
+- Sometimes pasting from offhand using the clipboard wrench doesn't work (likely a latency issue)
