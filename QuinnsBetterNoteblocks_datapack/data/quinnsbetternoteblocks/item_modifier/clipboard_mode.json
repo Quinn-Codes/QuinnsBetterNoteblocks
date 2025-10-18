@@ -1,0 +1,35 @@
+[
+    {
+      "function": "minecraft:set_lore",
+      "lore": [
+        {"text":"Shift+Right-Click on noteblock to upgrade it","italic":true,"color":"dark_gray","bold":false},
+        {"text":"Shift+Right-Click anything else to change modes","italic":true,"color":"dark_gray","bold":false},
+        {"text":"Place note block from offhand to paste into it","italic":true,"color":"dark_gray","bold":false},
+        {"text":" "},
+        {"text":"Mode: ","italic":false,"color":"blue","bold":true,"extra":[{"text":"Clipboard","italic":false,"color":"dark_aqua","bold":true}]},
+        {"text":"Left-Click plays note","italic":false,"color":"dark_aqua","bold":false},
+        {"text":"Shift+Left-Click pastes a random note","italic":false,"color":"dark_aqua","bold":false},
+        {"text":"Right-Click pastes into selected note block","italic":false,"color":"dark_aqua","bold":false},
+        {"text":"Shift+Right Click copies selected note block","italic":false,"color":"dark_aqua","bold":false}
+      ],
+      "mode": "replace_all"
+    },
+    {
+      "function": "minecraft:set_custom_data",
+      "tag": {
+        "wrench_state": "Clipboard"
+      },
+      "conditions": []
+    },
+    {
+      "function": "minecraft:set_components",
+      "components": {
+        "minecraft:item_model": "quinnsbetternoteblocks:clipboard_wrench"
+      }
+    },
+    {
+      "function": "minecraft:set_name",
+      "name": "Clipboard Wrench",
+      "target": "item_name"
+    }
+  ]

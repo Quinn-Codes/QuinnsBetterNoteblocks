@@ -8,6 +8,7 @@ from pydub import AudioSegment
 from config import INSTRUMENTS
 from config import NOTES
 from config import RP_DIRECTORY
+from config import MAX_OCTAVE
 
 def build_sound_files():
     shifted_notes = ['c', 'csharp', 'd', 'dsharp', 'e', 'f', 'fsharp', 'g', 'gsharp', 'a', 'asharp', 'b']
@@ -22,12 +23,12 @@ def build_sound_files():
         input_file = f"Assets/Original Sounds/Note_block_{i}.ogg"
         sample_rate = get_sample_rate(input_file)
 
-        # Iterate over octaves 1 through 8
-        for o in range(1, 9):
+        # Iterate over octaves 1 through 9
+        for o in range(1, MAX_OCTAVE+1):
             # Iterate over each note to be generated
             for n in shifted_notes:
                 # Skip if the note is outside minecraft's note block range
-                if ((o == 1) and (n in ['c', 'csharp', 'd', 'dsharp', 'e', 'f'])) or ((o == 8) and (n in ['g', 'gsharp', 'a', 'asharp', 'b'])):
+                if ((o == 1) and (n in ['c', 'csharp', 'd', 'dsharp', 'e', 'f'])) or ((o == MAX_OCTAVE) and (n in ['g', 'gsharp', 'a', 'asharp', 'b'])):
                     continue
 
                 # Generate output filepath
@@ -83,7 +84,7 @@ def make_sound_json(overwrite=False):
     # For each instrument,
     for i in INSTRUMENTS.keys():
         # each octave,
-        for o in range(1, 9):
+        for o in range(1, MAX_OCTAVE+1):
             # and each note in that octave,
             for n in NOTES:
                 # Build the full sound.json string

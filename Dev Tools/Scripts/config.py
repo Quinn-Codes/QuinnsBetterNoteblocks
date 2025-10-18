@@ -26,4 +26,5 @@ INSTRUMENTS = {
     "banjo": 5,
     "pling": 5
 }
+MAX_OCTAVE = 9
 NOTES = ['fsharp', 'g', 'gsharp', 'a', 'asharp', 'b', 'c', 'csharp', 'd', 'dsharp', 'e', 'f']

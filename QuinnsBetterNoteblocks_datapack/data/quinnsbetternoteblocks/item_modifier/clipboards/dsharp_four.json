@@ -1,0 +1,24 @@
+[
+    {
+        "function": "minecraft:set_name",
+        "name": [
+            {
+                "text": "Clipboard Wrench (",
+                "italic": false
+            },
+            {
+                "text": "D#",
+                "color": "#E8005A"
+            },
+            {
+                "text": "4",
+                "color": "#E8005A"
+            },
+            {
+                "text": ")",
+                "italic": false
+            }
+        ],
+        "target": "item_name"
+    }
+]

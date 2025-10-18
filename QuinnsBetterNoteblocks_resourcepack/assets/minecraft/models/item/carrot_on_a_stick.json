@@ -5,6 +5,7 @@
     },
     "overrides":
     [
-        { "predicate": {"custom_model_data": 12}, "model": "quinnsbetternoteblocks/tuning_wrench"}
+        { "predicate": {"custom_model_data": 12}, "model": "quinnsbetternoteblocks/tuning_wrench"},
+        { "predicate": {"custom_model_data": 11}, "model": "quinnsbetternoteblocks/clipboard_wrench"}
     ]
 }

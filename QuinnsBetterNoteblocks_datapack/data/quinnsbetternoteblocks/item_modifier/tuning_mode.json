@@ -8,8 +8,8 @@
         {"text":"Mode: ","italic":false,"color":"blue","bold":true,"extra":[{"text":"Tuning","italic":false,"color":"dark_green","bold":true}]},
         {"text":"Left-Click decreases note","italic":false,"color":"dark_green","bold":false},
         {"text":"Right-Click increases note","italic":false,"color":"dark_green","bold":false},
-        {"text":"Shift+Left-Click plays current note","italic":false,"color":"dark_green","bold":false},
-        {"text":"Shift+Right-Click increases note by 4","italic":false,"color":"dark_green","bold":false}
+        {"text":"Shift+Left-Click decreases octave","italic":false,"color":"dark_green","bold":false},
+        {"text":"Shift+Right-Click increases octave","italic":false,"color":"dark_green","bold":false}
       ],
       "mode": "replace_all"
     },
@@ -19,6 +19,12 @@
         "wrench_state": "Tuning"
       },
       "conditions": []
+    },
+    {
+      "function": "minecraft:set_components",
+      "components": {
+        "minecraft:item_model": "quinnsbetternoteblocks:tuning_wrench"
+      }
     },
     {
       "function": "minecraft:set_name",

@@ -1,0 +1,5 @@
+# Update text display
+execute if entity @s[tag=o1-3] run execute positioned ~ ~1.25 ~ as @e[type=text_display,distance=..0.25,tag=nb_text] run data modify entity @s text set value '{"text":"Octave 2","color":"#CC8600"}'
+execute if entity @s[tag=o3-5] run execute positioned ~ ~1.25 ~ as @e[type=text_display,distance=..0.25,tag=nb_text] run data modify entity @s text set value '{"text":"Octave 4","color":"#E8005A"}'
+execute if entity @s[tag=o5-7] run execute positioned ~ ~1.25 ~ as @e[type=text_display,distance=..0.25,tag=nb_text] run data modify entity @s text set value '{"text":"Octave 6","color":"#2D00F9"}'
+execute if entity @s[tag=o7-9] run execute positioned ~ ~1.25 ~ as @e[type=text_display,distance=..0.25,tag=nb_text] run data modify entity @s text set value '{"text":"Octave 8","color":"#00E958"}'

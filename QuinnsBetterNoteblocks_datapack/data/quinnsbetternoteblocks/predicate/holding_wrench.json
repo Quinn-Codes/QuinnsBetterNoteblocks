@@ -1,14 +1,33 @@
 {
-  "condition": "minecraft:entity_properties",
-  "entity": "this",
-  "predicate": {
-    "equipment": {
-      "mainhand": {
-        "items": "minecraft:carrot_on_a_stick",
-        "components": {
-          "minecraft:item_model": "quinnsbetternoteblocks:tuning_wrench"
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "mainhand": {
+            "items": "minecraft:carrot_on_a_stick",
+            "components": {
+              "minecraft:item_model": "quinnsbetternoteblocks:tuning_wrench"
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "mainhand": {
+            "items": "minecraft:carrot_on_a_stick",
+            "components": {
+              "minecraft:item_model": "quinnsbetternoteblocks:clipboard_wrench"
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

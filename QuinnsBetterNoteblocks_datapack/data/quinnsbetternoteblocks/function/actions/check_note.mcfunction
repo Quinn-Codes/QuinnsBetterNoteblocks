@@ -1,4 +1,4 @@
-# Called from nb_left_click
+# Called from DEPRECTATED
 # As interaction
 
 # Play note block sound

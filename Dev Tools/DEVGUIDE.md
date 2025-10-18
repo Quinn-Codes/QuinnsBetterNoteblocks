@@ -4,7 +4,7 @@ When developing a resource pack and data pack simultaneously, it makes things mu
 
 ## Setup Guide
 
-If you would like to make your own additions to this project, you can do so with this Dev Tools folder. Start by cloning this repository to this workspace.
+If you would like to make your own additions to this project, you can do so with this Dev Tools folder. Start by cloning this repository to your workspace.
 
 Next, you'll want to modify config.py. You only need to edit the first two parameters, `MC_DIRECTORY` and `MC_SAVE`.
 
@@ -20,4 +20,7 @@ In the Scripts folder you should see three other .py files- `main.py`, `commandb
 
 `commandbuilder.py` auto-generates many of the function files in the datapack- particularly each of the files that determines which sound plays when a noteblock is powered. Since there are 8 octaves, 16 instruments, and 12 notes per octave, there are a LOT of combinations to go through, which is why this is auto-generated.
 
-`soundbuilder.py` auto-generates the assets for the resource pack. In vanilla minecraft, note block sounds are actually played by taking a the middle-note of the instrument and pitching it up or down accordingly. Minecraft's sound system can only pitch up/down these files so far, so we have to generate all the possible combinations ahead of time. Each of these original 'middle notes' are stored in `Dev Tools/Assets/Original Sounds`. (it may be possible to only generate the middle note for each octave range and then pitch up/down this note using the /playsound command for each octave range just like minecraft does- I will attempt to make this work at some point. This will greatly reduce the number of files in the resourcepack.)
+`soundbuilder.py` auto-generates the assets for the resource pack. In vanilla minecraft, note block sounds are actually played by taking the middle-note of the instrument and pitching it up or down accordingly. Minecraft's sound system can only pitch up/down these files so far, so we have to generate all the possible combinations ahead of time. Each of these original 'middle notes' are stored in `Dev Tools/Assets/Original Sounds`. (it may be possible to only generate the middle note for each octave range and then pitch up/down this note using the /playsound command for each octave range just like minecraft does- I will attempt to make this work at some point. This will greatly reduce the number of files in the resourcepack.)
+
+## Building Project
+To build the project, simply run the build.bat file. If you configured everything correctly, it should build to the game on the minecraft installation and save that you specified.
