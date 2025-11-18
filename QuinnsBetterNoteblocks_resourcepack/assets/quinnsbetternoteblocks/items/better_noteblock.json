@@ -1,0 +1,389 @@
+{
+  "model": {
+    "type": "minecraft:composite",
+    "models": [
+      {
+        "type": "minecraft:model",
+        "model": "quinnsbetternoteblocks:item/better_noteblock/better_noteblock"
+      },
+      {
+        "type": "minecraft:select",
+        "property": "minecraft:custom_model_data",
+        "index": 0,
+        "cases": [
+          {
+            "when": "instrument_null",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_null"
+            }
+          },
+          {
+            "when": "instrument_banjo",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_banjo"
+            }
+          },
+          {
+            "when": "instrument_bass",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_bass"
+            }
+          },
+          {
+            "when": "instrument_bassdrum",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_bassdrum"
+            }
+          },
+          {
+            "when": "instrument_bell",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_bell"
+            }
+          },
+          {
+            "when": "instrument_bit",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_bit"
+            }
+          },
+          {
+            "when": "instrument_chime",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_chime"
+            }
+          },
+          {
+            "when": "instrument_cowbell",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_cowbell"
+            }
+          },
+          {
+            "when": "instrument_didgeri",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_didgeri"
+            }
+          },
+          {
+            "when": "instrument_flute",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_flute"
+            }
+          },
+          {
+            "when": "instrument_guitar",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_guitar"
+            }
+          },
+          {
+            "when": "instrument_harp",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_harp"
+            }
+          },
+          {
+            "when": "instrument_hat",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_hat"
+            }
+          },
+          {
+            "when": "instrument_ironxylo",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_ironxylo"
+            }
+          },
+          {
+            "when": "instrument_pling",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_pling"
+            }
+          },
+          {
+            "when": "instrument_snare",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_snare"
+            }
+          },
+          {
+            "when": "instrument_xylo",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_xylo"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:select",
+        "property": "minecraft:custom_model_data",
+        "index": 1,
+        "cases": [
+          {
+            "when": "counter_0",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_0"
+            }
+          },
+          {
+            "when": "counter_1",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_1"
+            }
+          },
+          {
+            "when": "counter_2",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_2"
+            }
+          },
+          {
+            "when": "counter_3",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_3"
+            }
+          },
+          {
+            "when": "counter4",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter4"
+            }
+          },
+          {
+            "when": "counter_5",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_5"
+            }
+          },
+          {
+            "when": "counter_6",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_6"
+            }
+          },
+          {
+            "when": "counter_7",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_7"
+            }
+          },
+          {
+            "when": "counter_8",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_8"
+            }
+          },
+          {
+            "when": "counter_9",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_9"
+            }
+          },
+          {
+            "when": "counter_10",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_10"
+            }
+          },
+          {
+            "when": "counter_11",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_11"
+            }
+          },
+          {
+            "when": "counter_12",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_12"
+            }
+          },
+          {
+            "when": "counter_13",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_13"
+            }
+          },
+          {
+            "when": "counter_14",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_14"
+            }
+          },
+          {
+            "when": "counter_15",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_15"
+            }
+          },
+          {
+            "when": "counter_16",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_16"
+            }
+          },
+          {
+            "when": "counter_17",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_17"
+            }
+          },
+          {
+            "when": "counter_18",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_18"
+            }
+          },
+          {
+            "when": "counter_19",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_19"
+            }
+          },
+          {
+            "when": "counter_20",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_20"
+            }
+          },
+          {
+            "when": "counter_21",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_21"
+            }
+          },
+          {
+            "when": "counter_22",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_22"
+            }
+          },
+          {
+            "when": "counter_23",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_23"
+            }
+          },
+          {
+            "when": "counter_24",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_24"
+            }
+          }
+        ]
+      },
+      {
+        "type": "minecraft:select",
+        "property": "minecraft:custom_model_data",
+        "index": 2,
+        "cases": [
+          {
+            "when": "octave_1",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/octaves/octave_1"
+            }
+          },
+          {
+            "when": "octave_2",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/octaves/octave_2"
+            }
+          },
+          {
+            "when": "octave_3",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/octaves/octave_3"
+            }
+          },
+          {
+            "when": "octave_4",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/octaves/octave_4"
+            }
+          },
+          {
+            "when": "octave_5",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/octaves/octave_5"
+            }
+          },
+          {
+            "when": "octave_6",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/octaves/octave_6"
+            }
+          },
+          {
+            "when": "octave_7",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/octaves/octave_7"
+            }
+          },
+          {
+            "when": "octave_8",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/octaves/octave_8"
+            }
+          },
+          {
+            "when": "octave_9",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/octaves/octave_9"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

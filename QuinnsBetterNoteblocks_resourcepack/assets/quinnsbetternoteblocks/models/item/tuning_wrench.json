@@ -2,16 +2,16 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [8, 8],
 	"textures": {
-		"0": "quinnsbetternoteblocks:item/wrench_handle",
-		"2": "quinnsbetternoteblocks:item/rod",
-		"3": "quinnsbetternoteblocks:item/amethyst",
-		"4": "quinnsbetternoteblocks:item/facet_tuning",
-		"5": "quinnsbetternoteblocks:item/divet",
-		"6": "quinnsbetternoteblocks:item/cube_NW",
-		"7": "quinnsbetternoteblocks:item/cube_SE",
-		"8": "quinnsbetternoteblocks:item/cube_SW",
-		"9": "quinnsbetternoteblocks:item/cube_NE",
-		"particle": "quinnsbetternoteblocks:item/wrench_handle"
+		"0": "quinnsbetternoteblocks:item/wrench/wrench_handle",
+		"2": "quinnsbetternoteblocks:item/wrench/rod",
+		"3": "quinnsbetternoteblocks:item/wrench/amethyst",
+		"4": "quinnsbetternoteblocks:item/wrench/facet_tuning",
+		"5": "quinnsbetternoteblocks:item/wrench/divet",
+		"6": "quinnsbetternoteblocks:item/wrench/cube_NW",
+		"7": "quinnsbetternoteblocks:item/wrench/cube_SE",
+		"8": "quinnsbetternoteblocks:item/wrench/cube_SW",
+		"9": "quinnsbetternoteblocks:item/wrench/cube_NE",
+		"particle": "quinnsbetternoteblocks:item/wrench/wrench_handle"
 	},
 	"elements": [
 		{

@@ -1,0 +1,6 @@
+{
+  "parent": "quinnsbetternoteblocks:item/better_noteblock/octaves/octave_1",
+  "textures": {
+    "0": "quinnsbetternoteblocks:item/better_noteblock/octaves/octave_8"
+  }
+}

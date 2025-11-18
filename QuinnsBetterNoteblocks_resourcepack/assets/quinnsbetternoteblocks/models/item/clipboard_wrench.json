@@ -1,6 +1,6 @@
 {
   "parent": "quinnsbetternoteblocks:item/tuning_wrench",
   "textures": {
-    "4": "quinnsbetternoteblocks:item/facet_clipboard"
+    "4": "quinnsbetternoteblocks:item/wrench/facet_clipboard"
   }
 }

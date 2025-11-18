@@ -1,0 +1,7 @@
+{
+  "parent": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_0",
+  "textures": {
+    "0": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_23",
+    "1": "quinnsbetternoteblocks:item/better_noteblock/notes/note_f2"
+  }
+}
