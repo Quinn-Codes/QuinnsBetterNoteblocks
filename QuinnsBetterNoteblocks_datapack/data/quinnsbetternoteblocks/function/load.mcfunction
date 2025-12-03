@@ -17,5 +17,8 @@ scoreboard objectives add octaveUpdated dummy
 # Allows for pasting into noteblocks from offhanding
 scoreboard objectives add qbnb_pasting dummy
 
+# Macro scoreboards
+scoreboard objectives add qbnb_temp dummy
+
 # Start cleanup function
 function quinnsbetternoteblocks:cleanup

@@ -1,0 +1,3 @@
+# Called from displayentity_update
+# At interaction entity, as interaction entity
+$execute positioned ~ ~0.25 ~ run item modify entity @e[limit=1,type=minecraft:item_display,distance=..0.25] container.0 {  "function": "minecraft:set_custom_model_data",  "tag": "clipboard",  "strings": {    "values": [      "instrument_$(instrument)", "counter_$(note)", "octave_$(octave)"    ],    "mode": "replace_section",    "offset": 0,    "size": 3  }}

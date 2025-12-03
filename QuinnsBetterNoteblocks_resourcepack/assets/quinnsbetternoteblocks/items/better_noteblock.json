@@ -166,10 +166,10 @@
             }
           },
           {
-            "when": "counter4",
+            "when": "counter_4",
             "model": {
               "type": "minecraft:model",
-              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter4"
+              "model": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_4"
             }
           },
           {

@@ -1,0 +1,12 @@
+{
+  "function": "minecraft:set_custom_model_data",
+  "tag": "clipboard",
+  "strings": {
+    "values": [
+      "counter_18"
+    ],
+    "mode": "replace_section",
+    "offset": 1,
+    "size": 1
+  }
+}

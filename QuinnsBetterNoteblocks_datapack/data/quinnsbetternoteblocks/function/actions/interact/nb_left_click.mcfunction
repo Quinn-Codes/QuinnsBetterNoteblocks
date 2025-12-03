@@ -1,5 +1,6 @@
 # Called from interaction tick
 # As interacting player
+# At note block
 
 # Clear interaction
 data remove entity @e[type=interaction,distance=..0.1,tag=nb_interaction,limit=1] attack
@@ -15,3 +16,6 @@ execute if predicate quinnsbetternoteblocks:holding_wrench_clipboard if predicat
 execute if predicate quinnsbetternoteblocks:holding_wrench_tuning unless predicate quinnsbetternoteblocks:holding_shift run execute as @e[type=interaction,distance=..0.1,tag=nb_interaction,limit=1] run function quinnsbetternoteblocks:actions/interact/tuning/tuning_lc
 # Shift + left click tuning mode
 execute if predicate quinnsbetternoteblocks:holding_wrench_tuning if predicate quinnsbetternoteblocks:holding_shift run execute as @e[type=interaction,distance=..0.1,tag=nb_interaction,limit=1] run function quinnsbetternoteblocks:actions/interact/tuning/tuning_slc
+
+# Update better noteblock
+execute as @e[type=interaction,distance=..0.1,tag=nb_interaction,limit=1] run function quinnsbetternoteblocks:gamelogic/nb_display/displayentity_update

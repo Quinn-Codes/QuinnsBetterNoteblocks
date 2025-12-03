@@ -1,5 +1,6 @@
 # Called from nb_left_click
 # As interacting player
+# At note block
 
 # Update scoreboard
 execute store result score @s qbnb_rng run random value 0..23
