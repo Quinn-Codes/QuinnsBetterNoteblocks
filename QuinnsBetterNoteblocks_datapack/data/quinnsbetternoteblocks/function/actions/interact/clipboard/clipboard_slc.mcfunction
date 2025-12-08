@@ -41,7 +41,7 @@ execute if score @s qbnb_rng matches 2 run function quinnsbetternoteblocks:actio
 execute if score @s qbnb_rng matches 3 run function quinnsbetternoteblocks:actions/interact/clipboard/logic/paste_o7-9
 
 # Update octave text
-execute as @e[type=interaction,distance=..0.1,tag=nb_interaction,limit=1] run function quinnsbetternoteblocks:actions/interact/tuning/logic/update_text_octave
+#execute as @e[type=interaction,distance=..0.1,tag=nb_interaction,limit=1] run function quinnsbetternoteblocks:actions/interact/tuning/logic/update_text_octave
 
 # Playsound
 execute at @s run playsound minecraft:ui.hud.bubble_pop player @s ~ ~ ~ 1 1.2

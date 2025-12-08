@@ -6,7 +6,7 @@
 tag @s remove inactive
 tag @s add active
 # Increase size
-data merge entity @s {width:1.05f,height:1.05f}
+data merge entity @s {width:1.01f,height:1.125f}
 # Teleport outside the block
 #tp @s ~ ~-0.2 ~
 

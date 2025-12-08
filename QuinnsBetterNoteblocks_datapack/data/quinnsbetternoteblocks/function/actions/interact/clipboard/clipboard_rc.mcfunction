@@ -35,7 +35,7 @@ execute if entity @s[nbt={SelectedItem:{components:{"minecraft:custom_data":{Cli
 execute if entity @s[nbt={SelectedItem:{components:{"minecraft:custom_data":{ClipboardOctave:"o7-9"}}}}] run function quinnsbetternoteblocks:actions/interact/clipboard/logic/paste_o7-9
 
 # Update octave text
-execute as @e[type=interaction,distance=..0.1,tag=nb_interaction,limit=1] run function quinnsbetternoteblocks:actions/interact/tuning/logic/update_text_octave
+#execute as @e[type=interaction,distance=..0.1,tag=nb_interaction,limit=1] run function quinnsbetternoteblocks:actions/interact/tuning/logic/update_text_octave
 
 # Playsound
 execute at @s run playsound minecraft:ui.hud.bubble_pop player @s ~ ~ ~ 1 1.2

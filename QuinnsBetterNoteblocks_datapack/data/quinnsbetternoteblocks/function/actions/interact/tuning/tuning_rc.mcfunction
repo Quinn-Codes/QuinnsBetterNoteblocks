@@ -45,7 +45,7 @@ scoreboard players reset @s noteUpdated
 scoreboard players reset @s octaveUpdated
 
 # Update octave text
-function quinnsbetternoteblocks:actions/interact/tuning/logic/update_text_octave
+#function quinnsbetternoteblocks:actions/interact/tuning/logic/update_text_octave
 
 # Activate note block
 function quinnsbetternoteblocks:gamelogic/nb_powered

@@ -44,7 +44,7 @@ execute if score @s octaveUpdated matches 1 run function quinnsbetternoteblocks:
 scoreboard players reset @s noteUpdated
 
 # Update octave text
-function quinnsbetternoteblocks:actions/interact/tuning/logic/update_text_octave
+#function quinnsbetternoteblocks:actions/interact/tuning/logic/update_text_octave
 
 # Activate note block
 function quinnsbetternoteblocks:gamelogic/nb_powered
