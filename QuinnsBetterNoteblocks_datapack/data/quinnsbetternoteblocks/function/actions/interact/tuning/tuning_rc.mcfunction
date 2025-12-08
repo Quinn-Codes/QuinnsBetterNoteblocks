@@ -7,9 +7,6 @@ scoreboard players set @s noteUpdated 0
 scoreboard players set @s octaveUpdated 0
 
 # Increase note
-
-# If the octave range changed, indicate that
-execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=23] run setblock ~ ~ ~ minecraft:note_block[note=0]
 execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=24] run setblock ~ ~ ~ minecraft:note_block[note=1]
 
 # If the octave range changed, indicate that

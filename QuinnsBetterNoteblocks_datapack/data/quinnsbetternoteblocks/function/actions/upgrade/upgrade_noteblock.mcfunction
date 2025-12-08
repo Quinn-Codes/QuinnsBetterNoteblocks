@@ -1,7 +1,7 @@
 # Called from check_above
 
 # Set block above to barrier
-setblock ~ ~1 ~ minecraft:barrier keep
+setblock ~ ~1 ~ minecraft:sculk_vein[down=true] keep
 
 # Summon text display
 summon minecraft:text_display ~ ~1.25 ~ {text:'{"text":"Octave 3","color":"#77D700"}',see_through:false,billboard:center,Tags:["nb_text"]}

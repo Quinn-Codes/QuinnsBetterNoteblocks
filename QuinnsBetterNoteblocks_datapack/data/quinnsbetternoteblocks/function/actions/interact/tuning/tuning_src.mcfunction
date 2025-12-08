@@ -7,7 +7,6 @@ scoreboard players set @s noteUpdated 0
 scoreboard players set @s octaveUpdated 0
 
 # Increase note by 12
-execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=12] run setblock ~ ~ ~ minecraft:note_block[note=0]
 execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=13] run setblock ~ ~ ~ minecraft:note_block[note=1]
 execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=14] run setblock ~ ~ ~ minecraft:note_block[note=2]
 execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=15] run setblock ~ ~ ~ minecraft:note_block[note=3]
@@ -36,6 +35,7 @@ execute if score @s noteUpdated matches 0 run execute store success score @s not
 execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=9] run setblock ~ ~ ~ minecraft:note_block[note=21]
 execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=10] run setblock ~ ~ ~ minecraft:note_block[note=22]
 execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=11] run setblock ~ ~ ~ minecraft:note_block[note=23]
+execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=12] run setblock ~ ~ ~ minecraft:note_block[note=24]
 
 # increase octave range if octaveUpdated is 1
 execute unless score @s octaveUpdated matches 0 run function quinnsbetternoteblocks:actions/interact/tuning/logic/increase_octave_range

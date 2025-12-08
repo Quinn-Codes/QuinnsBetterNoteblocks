@@ -1,9 +1,9 @@
-# Called from cleanup
+# Called from nb_check_broken
 # As interaction
 # At note block
 
-# Clear the barrier above
-execute if block ~ ~1 ~ minecraft:barrier run setblock ~ ~1 ~ minecraft:air
+# Clear the sculk vein above
+execute if block ~ ~1 ~ minecraft:sculk_vein run setblock ~ ~1 ~ minecraft:air
 # Kill the text display
 execute positioned ~ ~1.25 ~ run kill @e[type=text_display,distance=..0.25,tag=nb_text]
 # Kill item display

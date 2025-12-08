@@ -8,10 +8,10 @@ execute as @e[type=minecraft:interaction,tag=nb_interaction,tag=active] run func
 execute as @a[scores={tuning_wrench_useR=1..}] if predicate quinnsbetternoteblocks:holding_wrench if predicate quinnsbetternoteblocks:holding_shift run function quinnsbetternoteblocks:actions/upgrade/wrench_upgrade
 
 # Check for powered note blocks and activate them
-execute as @e[type=interaction,tag=nb_interaction] at @s align y if block ~ ~1 ~ minecraft:note_block[powered=true] unless entity @s[tag=activated] run function quinnsbetternoteblocks:gamelogic/nb_powered
+execute as @e[type=interaction,tag=nb_interaction] at @s align y positioned ~ ~1 ~ if block ~ ~ ~ minecraft:note_block[powered=true] unless entity @s[tag=activated] run function quinnsbetternoteblocks:gamelogic/nb_powered
 
 # Check for unpowered noteblocks and allow them to trigger again
-execute as @e[type=interaction,tag=nb_interaction,tag=activated] at @s align y unless block ~ ~1 ~ minecraft:note_block[powered=true] run tag @s remove activated
+execute as @e[type=interaction,tag=nb_interaction,tag=activated] at @s align y positioned ~ ~1 ~ unless block ~ ~ ~ minecraft:note_block[powered=true] run tag @s remove activated
 
 # Clear wrench use score
 scoreboard players set @a[scores={tuning_wrench_useR=1..}] tuning_wrench_useR 0
