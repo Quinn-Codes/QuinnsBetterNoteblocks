@@ -1,6 +1,15 @@
 {
-    "pack": {
-        "pack_format": 88.0,
-        "description": "Better control over noteblocks"
-    }
+  "pack": {
+    "description": "Better control over noteblocks",
+    "pack_format": 81,
+    "supported_formats": {
+      "min_inclusive": 61,
+      "max_inclusive": 94
+    },
+    "min_format": 61,
+    "max_format": [
+      91,
+      1
+    ]
+  }
 }
