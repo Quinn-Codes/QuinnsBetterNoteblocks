@@ -19,11 +19,11 @@ execute if score @s noteUpdated matches 0 run execute store success score @s not
 execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=9] run setblock ~ ~ ~ minecraft:note_block[note=21]
 execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=10] run setblock ~ ~ ~ minecraft:note_block[note=22]
 execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=11] run setblock ~ ~ ~ minecraft:note_block[note=23]
+execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=12] run setblock ~ ~ ~ minecraft:note_block[note=24]
 
 # If the octave range changed, indicate that
 execute unless score @s noteUpdated matches 0 run scoreboard players set @s octaveUpdated 1
 
-execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=12] run setblock ~ ~ ~ minecraft:note_block[note=0]
 execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=13] run setblock ~ ~ ~ minecraft:note_block[note=1]
 execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=14] run setblock ~ ~ ~ minecraft:note_block[note=2]
 execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=15] run setblock ~ ~ ~ minecraft:note_block[note=3]
@@ -45,7 +45,7 @@ scoreboard players reset @s noteUpdated
 scoreboard players reset @s octaveUpdated
 
 # Update octave text
-function quinnsbetternoteblocks:actions/interact/tuning/logic/update_text_octave
+#function quinnsbetternoteblocks:actions/interact/tuning/logic/update_text_octave
 
 # Activate note block
 function quinnsbetternoteblocks:gamelogic/nb_powered

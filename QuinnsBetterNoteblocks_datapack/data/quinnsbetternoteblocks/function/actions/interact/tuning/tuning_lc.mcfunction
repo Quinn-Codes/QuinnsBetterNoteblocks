@@ -8,11 +8,11 @@ scoreboard players set @s octaveUpdated 0
 
 # Decrease note
 execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=0] run setblock ~ ~ ~ minecraft:note_block[note=23]
+execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=1] run setblock ~ ~ ~ minecraft:note_block[note=24]
 
 # If the octave range changed, indicate that
 execute unless score @s noteUpdated matches 0 run scoreboard players set @s octaveUpdated 1
 
-execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=1] run setblock ~ ~ ~ minecraft:note_block[note=0]
 execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=2] run setblock ~ ~ ~ minecraft:note_block[note=1]
 execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=3] run setblock ~ ~ ~ minecraft:note_block[note=2]
 execute if score @s noteUpdated matches 0 run execute store success score @s noteUpdated run execute if block ~ ~ ~ minecraft:note_block[note=4] run setblock ~ ~ ~ minecraft:note_block[note=3]
@@ -44,7 +44,7 @@ execute if score @s octaveUpdated matches 1 run function quinnsbetternoteblocks:
 scoreboard players reset @s noteUpdated
 
 # Update octave text
-function quinnsbetternoteblocks:actions/interact/tuning/logic/update_text_octave
+#function quinnsbetternoteblocks:actions/interact/tuning/logic/update_text_octave
 
 # Activate note block
 function quinnsbetternoteblocks:gamelogic/nb_powered

@@ -7,4 +7,7 @@ tag @s add inactive
 # Decrease size
 data merge entity @s {width:0.5f,height:0.5f}
 # Hide in the block
-tp @s ~ ~0.2 ~
+#tp @s ~ ~0.2 ~
+
+# Despawn better noteblock
+execute at @s run function quinnsbetternoteblocks:gamelogic/nb_display/displayentity_despawn

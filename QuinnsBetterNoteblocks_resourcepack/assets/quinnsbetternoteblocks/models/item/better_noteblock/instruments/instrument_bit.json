@@ -1,0 +1,6 @@
+{
+  "parent": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_null",
+  "textures": {
+    "0": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_bit"
+  }
+}

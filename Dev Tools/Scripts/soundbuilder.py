@@ -87,12 +87,16 @@ def make_sound_json(overwrite=False):
         for o in range(1, MAX_OCTAVE+1):
             # and each note in that octave,
             for n in NOTES:
+                if(((o == 1) and (n == 'f' or n == 'e' or n == 'dsharp' or n == 'd' or n == 'csharp' or n == 'c')) or ((o == 9) and (n == 'g' or n == 'gsharp' or n == 'a' or n == 'asharp' or n == 'b'))):
+                    continue
                 # Build the full sound.json string
-                soundjson += f"\"{i}.o{o}.{n}\":{{\"category\":\"record\",\"subtitle\":\"subtitles.{i}_o{o}_{n}\",\"sounds\":[\"quinnsbetternoteblocks:{i}/o{o}/{i}_o{o}_{n}\"]}},"
+                #soundjson += f"\"{i}.o{o}.{n}\":{{\"category\":\"record\",\"subtitle\":\"subtitles.{i}_o{o}_{n}\",\"sounds\":[\"quinnsbetternoteblocks:{i}/o{o}/{i}_o{o}_{n}\"]}}," ORIGINAL- FOR SEPARATE SUBTITLES
+                soundjson += f"\"{i}.o{o}.{n}\":{{\"category\":\"record\",\"subtitle\":\"subtitles.betternoteblockplays\",\"sounds\":[\"quinnsbetternoteblocks:{i}/o{o}/{i}_o{o}_{n}\"]}},"
                 # Create subtitles for all sounds
 
                 sharp = "#" if "sharp" in n else ""
-                subtitles += f"\"subtitles.{i}_o{o}_{n}\": \"{i.capitalize()} plays {n[0].capitalize()}{sharp}{o}\","
+                #subtitles += f"\"subtitles.{i}_o{o}_{n}\": \"{i.capitalize()} plays {n[0].capitalize()}{sharp}{o}\"," ORIGINAL - FOR SEPARATE SUBTITLES
+                subtitles += f"\"subtitles.{i}_o{o}_{n}\": \"Better Note Block plays\","
 
     # Strip the trailing comma ,
     soundjson = soundjson.rstrip(", ")
@@ -108,9 +112,9 @@ def make_sound_json(overwrite=False):
         with open(os.path.join(RP_DIRECTORY, "assets/quinnsbetternoteblocks", "sounds.json"), "w") as json_file:
             json.dump(json.loads(soundjson), json_file)
 
-        print("Writing en_us.json...")
-        with open(os.path.join(RP_DIRECTORY, "assets/quinnsbetternoteblocks/lang", "en_us.json"), "w") as json_file:
-            json.dump(json.loads(subtitles), json_file)
+        #print("Writing en_us.json...")
+        #with open(os.path.join(RP_DIRECTORY, "assets/quinnsbetternoteblocks/lang", "en_us.json"), "w") as json_file:
+            #json.dump(json.loads(subtitles), json_file)
 
 # Gets the sample rate of a given file using ffprobe
 def get_sample_rate(file_path):
