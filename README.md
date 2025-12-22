@@ -6,6 +6,7 @@ A vanilla friendly datapack/resourcepack that adds better functionality to noteb
 If you've ever tried to make a jingle or a song using noteblocks but gave up because Minecraft's noteblocks can't pitch high or low enough, this project is for you! While vanilla Minecraft only supports 2 octaves, Quinn's Better Noteblocks adds support for 9 octaves, which is more than enough to create any song! This pack is fully vanilla-friendly and only requires the installation of a resourcepack and a datapack.
 
 ## Demo
+[![Demo Video](/Dev%20Tools/Assets/qbnb_youtube.png)](www.youtube.com/watch?v=61Gmi18TuOA&feature=youtu.be "Quinn's Better Noteblocks - Improved Note Blocks in Vanilla Minecraft! [Datapack/Resourcepack]")
 
 
 |                |Vanilla Minecraft              |QuinnsBetterNoteblocks       |
@@ -46,14 +47,17 @@ Use this to unlock the potential of Better Noteblocks! Shift + Right Click conve
 #### Recipe
 !['Recipe'](/Dev%20Tools/Assets/recipe.png)
 #### Tuning Mode
+*Shift+Right Click the ground to change modes!*
 !['Tuning Mode'](/Dev%20Tools/Assets/tuning_wrench.png)
 #### Clipboard Mode
+*Shift+Right Click the ground to change modes!*
 !['Clipboard Mode'](/Dev%20Tools/Assets/clipboard_wrench.png)
 
 ## Planned Features
 - 'Advanced Settings' for wrench for things like tuning key, pasting a series of notes, etc
 - Custom paintings that provide informational note block posters (like chords, notes, etc)
 - New instruments
+- Songmaker mode
 
 ## Installation
 ### Singleplayer
@@ -80,6 +84,8 @@ Use these instructions if you are a server owner and would like to add QuinnsBet
 	- A: Any noteblock that is upgraded will spawn in 1 entity. There are also commands running every tick to check this entity. You can expect at least some extra impact on performance per note block. The performance impact of this has yet to be stress tested, but it seems like the overall impact is low unless you are making a very large note block contraption. That being said, it seems to have no impact on my frames or TPS in my testing world. I am also trying my best to keep this as optimized as possible while still providing the best features.
 - Q: Why is there a sculk vein above my note block?
 	- A: When you upgrade a noteblock using the wrench, the vanilla note block noises need to be disabled to allow for the new BetterNoteblocks noises to play. The only way to achieve this is putting a block on top- the sculk vein.
+- Q: Will this work in multiplayer?
+	- A: Yes! Just make sure other players have the resourcepack too.
 
 ## Disclaimers
 - This pack works by spawning entities at upgraded noteblocks that hold extra information. If a command is run that kills all entities, the noteblocks will cease to function.
@@ -94,3 +100,5 @@ Use these instructions if you are a server owner and would like to add QuinnsBet
 - Better Noteblocks have an extra 1 tick delay
 	- As far as I know, there is no way around this due to how the datapack commands execute
 - Sometimes pasting from offhand using the clipboard wrench doesn't work (likely a latency issue)
+- Item display entity for the better noteblock has a set brightness (will appear to 'glow' in dark areas)
+- Some instruments may be tuned an octave or two off from where their default -should- be

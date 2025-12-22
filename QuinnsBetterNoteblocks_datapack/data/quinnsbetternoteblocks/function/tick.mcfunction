@@ -1,5 +1,5 @@
 # Executing at every player that is holding a wrench, grow nearby interaction entities
-execute as @a at @s if predicate quinnsbetternoteblocks:holding_wrench run execute as @e[type=minecraft:interaction,distance=..64,tag=nb_interaction,tag=inactive] at @s run function quinnsbetternoteblocks:gamelogic/interactions/interaction_grow
+execute as @a at @s if predicate quinnsbetternoteblocks:holding_wrench run execute as @e[type=minecraft:interaction,distance=..16,tag=nb_interaction,tag=inactive] at @s run function quinnsbetternoteblocks:gamelogic/interactions/interaction_grow
 
 # Big interaction boxes trigger every tick to check for clicks
 execute as @e[type=minecraft:interaction,tag=nb_interaction,tag=active] run function quinnsbetternoteblocks:gamelogic/interactions/interaction_tick
