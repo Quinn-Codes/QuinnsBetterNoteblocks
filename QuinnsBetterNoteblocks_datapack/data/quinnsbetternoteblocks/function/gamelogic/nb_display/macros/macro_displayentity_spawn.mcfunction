@@ -1,3 +1,3 @@
 # Called from displayentity_spawn
 # At interaction entity, as interaction entity
-$summon minecraft:item_display ~ ~0.5 ~ {Tags:[nb_display],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.01f,1.01f,1.01f]},item:{id:"iron_nugget",components:{"minecraft:item_model":"quinnsbetternoteblocks:better_noteblock","minecraft:custom_model_data":{"strings":["instrument_$(instrument)","counter_$(note)","octave_$(octave)"]}}}}
+$summon minecraft:item_display ~ ~0.5 ~ {Tags:[nb_display],brightness:{block:8,sky:8},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.01f,1.01f,1.01f]},item:{id:"iron_nugget",components:{"minecraft:item_model":"quinnsbetternoteblocks:better_noteblock","minecraft:custom_model_data":{"strings":["instrument_$(instrument)","counter_$(note)","octave_$(octave)"]}}}}

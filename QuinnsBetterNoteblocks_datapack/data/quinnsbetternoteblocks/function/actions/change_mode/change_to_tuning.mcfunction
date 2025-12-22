@@ -7,7 +7,7 @@ item modify entity @s weapon.mainhand quinnsbetternoteblocks:tuning_mode
 scoreboard players set @s wrenchCooldown 1
 
 # Chat feedback for changing to tuning mode
-title @a actionbar [{"text":"Tuning Mode","bold":true,"color":"dark_green"}]
+title @s actionbar [{"text":"Tuning Mode","bold":true,"color":"dark_green"}]
 
 # Sound feedback for changing to tuning mode
 playsound minecraft:block.small_amethyst_bud.place player @s ~ ~ ~ 0.2 1.2 0.5

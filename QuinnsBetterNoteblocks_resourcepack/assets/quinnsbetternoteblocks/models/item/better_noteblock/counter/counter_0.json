@@ -3,7 +3,8 @@
 	"credit": "Made with Blockbench",
 	"textures": {
         "0": "quinnsbetternoteblocks:item/better_noteblock/counter/counter_0",
-		"1": "quinnsbetternoteblocks:item/better_noteblock/notes/note_fsharp1"
+		"1": "quinnsbetternoteblocks:item/better_noteblock/notes/note_fsharp1",
+		"particle": "quinnsbetternoteblocks:item/better_noteblock/note_block"
 	},
 	"elements": [
 		{

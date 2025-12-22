@@ -8,7 +8,7 @@ item modify entity @s weapon.mainhand quinnsbetternoteblocks:clipboard_mode
 scoreboard players set @s wrenchCooldown 1
 
 # Chat feedback for changing to clipboard mode
-title @a actionbar [{"text":"Clipboard Mode","bold":true,"color":"dark_aqua"}]
+title @s actionbar [{"text":"Clipboard Mode","bold":true,"color":"dark_aqua"}]
 
 # Update wrench's name
 function quinnsbetternoteblocks:actions/misc/set_clipboard_name/set_clipboard_name

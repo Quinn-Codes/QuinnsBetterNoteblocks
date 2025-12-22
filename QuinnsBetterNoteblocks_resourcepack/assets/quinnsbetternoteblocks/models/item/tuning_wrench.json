@@ -7,10 +7,10 @@
 		"3": "quinnsbetternoteblocks:item/wrench/amethyst",
 		"4": "quinnsbetternoteblocks:item/wrench/facet_tuning",
 		"5": "quinnsbetternoteblocks:item/wrench/divet",
-		"6": "quinnsbetternoteblocks:item/wrench/cube_NW",
-		"7": "quinnsbetternoteblocks:item/wrench/cube_SE",
-		"8": "quinnsbetternoteblocks:item/wrench/cube_SW",
-		"9": "quinnsbetternoteblocks:item/wrench/cube_NE",
+		"6": "quinnsbetternoteblocks:item/wrench/cube_nw",
+		"7": "quinnsbetternoteblocks:item/wrench/cube_se",
+		"8": "quinnsbetternoteblocks:item/wrench/cube_sw",
+		"9": "quinnsbetternoteblocks:item/wrench/cube_ne",
 		"particle": "quinnsbetternoteblocks:item/wrench/wrench_handle"
 	},
 	"elements": [

@@ -2,7 +2,8 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "quinnsbetternoteblocks:item/better_noteblock/note_block"
+		"0": "quinnsbetternoteblocks:item/better_noteblock/note_block",
+		"particle": "quinnsbetternoteblocks:item/better_noteblock/note_block"
 	},
 	"elements": [
 		{
