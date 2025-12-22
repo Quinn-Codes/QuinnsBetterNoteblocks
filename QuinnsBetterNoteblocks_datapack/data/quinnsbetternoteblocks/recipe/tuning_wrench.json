@@ -7,23 +7,73 @@
     "S": "minecraft:sculk_catalyst",
     "N": "minecraft:note_block"
   },
-  "pattern": ["L A", " S ", " N "],
+  "pattern": [
+    "L A",
+    " S ",
+    " N "
+  ],
   "result": {
     "components": {
       "minecraft:item_model": "quinnsbetternoteblocks:tuning_wrench",
       "minecraft:unbreakable": {
         "show_in_tooltip": false
       },
-      "minecraft:item_name": "\"Tuning Wrench\"",
+      "minecraft:item_name": {
+        "text": "Tuning Wrench",
+        "bold": false
+      },
       "minecraft:lore": [
-        "{\"text\":\"Shift+Right-Click on noteblock to upgrade it\",\"italic\":true,\"color\":\"dark_gray\",\"bold\":false}",
-        "{\"text\":\"Shift+Right-Click anything else to change modes\",\"italic\":true,\"color\":\"dark_gray\",\"bold\":false}",
-        "{\"text\":\" \"}",
-        "{\"text\":\"Mode: \",\"italic\":false,\"color\":\"blue\",\"bold\":true,\"extra\":[{\"text\":\"Tuning\",\"italic\":false,\"color\":\"dark_green\",\"bold\":true}]}",
-        "{\"text\":\"Left-Click decreases note\",\"italic\":false,\"color\":\"dark_green\",\"bold\":false}",
-        "{\"text\":\"Right-Click increases note\",\"italic\":false,\"color\":\"dark_green\",\"bold\":false}",
-        "{\"text\":\"Shift+Left-Click decreases octave\",\"italic\":false,\"color\":\"dark_green\",\"bold\":false}",
-        "{\"text\":\"Shift+Right-Click increases octave\",\"italic\":false,\"color\":\"dark_green\",\"bold\":false}"
+        {
+          "text": "Shift+Right-Click on noteblock to upgrade it",
+          "color": "dark_gray",
+          "bold": false,
+          "italic": true
+        },
+        {
+          "text": "Shift+Right-Click anything else to change modes",
+          "color": "dark_gray",
+          "bold": false,
+          "italic": true
+        },
+        "",
+        {
+          "text": "Mode: ",
+          "extra": [
+            {
+              "text": "Tuning",
+              "color": "dark_green",
+              "bold": true,
+              "italic": false
+            }
+          ],
+          "color": "blue",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "Left-Click decreases note",
+          "color": "dark_green",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "Right-Click increases note",
+          "color": "dark_green",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "Shift+Left-Click decreases octave",
+          "color": "dark_green",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "text": "Shift+Right-Click increases octave",
+          "color": "dark_green",
+          "bold": false,
+          "italic": false
+        }
       ],
       "minecraft:custom_data": {
         "wrench_state": "Tuning"
