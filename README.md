@@ -7,7 +7,7 @@ If you've ever tried to make a jingle or a song using noteblocks but gave up bec
 
 ## Demo
 [![Demo Video](/Dev%20Tools/Assets/qbnb_youtube.png)](www.youtube.com/watch?v=61Gmi18TuOA&feature=youtu.be)
-<iframe width="560" height="315" src="www.youtube.com/watch?v=61Gmi18TuOA&feature=youtu.be" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/61Gmi18TuOA" title="" frameBorder="0"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowFullScreen></iframe></p>
 
 
 |                |Vanilla Minecraft              |QuinnsBetterNoteblocks       |
