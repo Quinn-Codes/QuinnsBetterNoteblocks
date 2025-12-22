@@ -6,11 +6,7 @@ A vanilla friendly datapack/resourcepack that adds better functionality to noteb
 If you've ever tried to make a jingle or a song using noteblocks but gave up because Minecraft's noteblocks can't pitch high or low enough, this project is for you! While vanilla Minecraft only supports 2 octaves, Quinn's Better Noteblocks adds support for 9 octaves, which is more than enough to create any song! This pack is fully vanilla-friendly and only requires the installation of a resourcepack and a datapack.
 
 ## Demo
-[![Demo Video](/Dev%20Tools/Assets/qbnb_youtube.png)](www.youtube.com/watch?v=61Gmi18TuOA&feature=youtu.be)
-<p>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/61Gmi18TuOA" title="" frameBorder="0"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowFullScreen></iframe>
-</p>
-
+[Demo Video](/Dev%20Tools/Assets/demovideo.mp4)
 
 |                |Vanilla Minecraft              |QuinnsBetterNoteblocks       |
 |----------------|-------------------------------|-----------------------------|
