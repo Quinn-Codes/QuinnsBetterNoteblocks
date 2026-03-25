@@ -47,3 +47,15 @@ execute if block ~ ~ ~ minecraft:note_block[instrument=banjo] run function quinn
 # PLING
 execute if block ~ ~ ~ minecraft:note_block[instrument=pling] run function quinnsbetternoteblocks:gamelogic/sound_activation/instruments/pling/pling_powered
 
+# TRUMPET
+execute if block ~ ~ ~ minecraft:note_block[instrument=trumpet] run function quinnsbetternoteblocks:gamelogic/sound_activation/instruments/trumpet/trumpet_powered
+
+# TRUMPET_EXPOSED
+execute if block ~ ~ ~ minecraft:note_block[instrument=trumpet_exposed] run function quinnsbetternoteblocks:gamelogic/sound_activation/instruments/trumpet_exposed/trumpet_exposed_powered
+
+# TRUMPET_WEATHERED
+execute if block ~ ~ ~ minecraft:note_block[instrument=trumpet_weathered] run function quinnsbetternoteblocks:gamelogic/sound_activation/instruments/trumpet_weathered/trumpet_weathered_powered
+
+# TRUMPET_OXIDIZED
+execute if block ~ ~ ~ minecraft:note_block[instrument=trumpet_oxidized] run function quinnsbetternoteblocks:gamelogic/sound_activation/instruments/trumpet_oxidized/trumpet_oxidized_powered
+

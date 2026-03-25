@@ -1,7 +1,7 @@
 # Global variables
 
 # The directory of minecraft this should be uploaded to
-MC_DIRECTORY = r"G:\Game Installations\CurseForge\Minecraft\Instances\Vanilla+"
+MC_DIRECTORY = r"G:\Game Installations\CurseForge\Minecraft\Instances\26.1"
 # The save file the datapack should be sent to
 MC_SAVE = "Redstone Testing"
 # The relative directory of the resource/data packs within this project
@@ -24,7 +24,11 @@ INSTRUMENTS = {
     "didgeridoo": 4,
     "bit": 6,
     "banjo": 5,
-    "pling": 5
+    "pling": 5,
+    "trumpet": 5,
+    "trumpet_exposed": 5,
+    "trumpet_weathered": 4,
+    "trumpet_oxidized": 4
 }
 MAX_OCTAVE = 9
 NOTES = ['fsharp', 'g', 'gsharp', 'a', 'asharp', 'b', 'c', 'csharp', 'd', 'dsharp', 'e', 'f']

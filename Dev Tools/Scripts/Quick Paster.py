@@ -3,6 +3,9 @@ import json
 # Quick and dirty code generation- this file is just a messy file to automate the generation of large amounts of code that follows easy rules
 # Everything here will likely only be used once and never again
 
+# This file can be ignored unless you want to modify how notes
+# appear in the UI
+
 def actionbar_maker():
     notes = ["F#", "G", "G#", "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#"]
     note_colors = ["77D700", "95C000", "B2A500", "CC8600", "E26500", "F34100", "FC1E00", "FE000F", "F70033", "E8005A", "CF0083", "AE00A9", "8600CC", "5B00E7", "2D00F9", "020AFE", "0037F6", "0068E0", "009ABC", "00C68D", "00E958", "00FC21", "1FFC00", "59E800", "94C100"]

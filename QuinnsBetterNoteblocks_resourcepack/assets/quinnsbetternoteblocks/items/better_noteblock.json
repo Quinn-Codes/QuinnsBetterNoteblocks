@@ -124,6 +124,34 @@
             }
           },
           {
+            "when": "instrument_trumpet",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_trumpet"
+            }
+          },
+          {
+            "when": "instrument_expotrum",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_expotrum"
+            }
+          },
+          {
+            "when": "instrument_oxidtrum",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_oxidtrum"
+            }
+          },
+          {
+            "when": "instrument_weattrum",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_weattrum"
+            }
+          },
+          {
             "when": "instrument_xylo",
             "model": {
               "type": "minecraft:model",

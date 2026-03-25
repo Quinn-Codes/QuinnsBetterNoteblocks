@@ -15,3 +15,7 @@ execute if block ~ ~ ~ minecraft:note_block[instrument=didgeridoo] run data modi
 execute if block ~ ~ ~ minecraft:note_block[instrument=bit] run data modify storage quinnsbetternoteblocks:noteblock_data instrument set value "bit"
 execute if block ~ ~ ~ minecraft:note_block[instrument=banjo] run data modify storage quinnsbetternoteblocks:noteblock_data instrument set value "banjo"
 execute if block ~ ~ ~ minecraft:note_block[instrument=pling] run data modify storage quinnsbetternoteblocks:noteblock_data instrument set value "pling"
+execute if block ~ ~ ~ minecraft:note_block[instrument=trumpet] run data modify storage quinnsbetternoteblocks:noteblock_data instrument set value "trumpet"
+execute if block ~ ~ ~ minecraft:note_block[instrument=trumpet_exposed] run data modify storage quinnsbetternoteblocks:noteblock_data instrument set value "expotrum"
+execute if block ~ ~ ~ minecraft:note_block[instrument=trumpet_weathered] run data modify storage quinnsbetternoteblocks:noteblock_data instrument set value "weattrum"
+execute if block ~ ~ ~ minecraft:note_block[instrument=trumpet_oxidized] run data modify storage quinnsbetternoteblocks:noteblock_data instrument set value "oxidtrum"

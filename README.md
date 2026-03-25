@@ -11,8 +11,8 @@ If you've ever tried to make a jingle or a song using noteblocks but gave up bec
 |                |Vanilla Minecraft              |QuinnsBetterNoteblocks       |
 |----------------|-------------------------------|-----------------------------|
 |Octaves         | 2                             | 9                           | 
-|Instruments     | 16                            | 16 (more coming!)           | 
-|Total Notes     | 400                           | 1,728                       |
+|Instruments     | 20                            | 20 (more coming!)           | 
+|Total Notes     | 500                           | 2,160                       |
 
 ## Features
  - Change the octave of noteblocks
@@ -56,7 +56,9 @@ Use this to unlock the potential of Better Noteblocks! Shift + Right Click conve
 - 'Advanced Settings' for wrench for things like tuning key, pasting a series of notes, etc
 - Custom paintings that provide informational note block posters (like chords, notes, etc)
 - New instruments
+- Holdable instruments
 - Songmaker mode
+- Music box item
 
 ## Installation
 ### Singleplayer

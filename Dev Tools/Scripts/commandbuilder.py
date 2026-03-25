@@ -6,7 +6,10 @@ from config import INSTRUMENTS
 from config import NOTES
 from config import MAX_OCTAVE
 
-# Builds the note block powered logic in the datapack
+"""
+Builds the note block powered logic in the datapack's data/quinnsbetternoteblocks
+/function/gamelogic/nb_powered.mcfunction file.
+"""
 def make_nb_powered():
     commands = "tag @s add activated\n"
 
@@ -27,7 +30,10 @@ def make_nb_powered():
     with open(filepath, 'w') as file:
         file.write(commands)
 
-# Builds the playsound command logic in the datapack
+"""
+Builds the playsound command logic in the datapack's data/quinnsbetternoteblocks
+/function/gamelogic/sound_activation/instruments folder
+"""
 def make_instruments():
     # For each instrument,
     print("Writing instrument power files:")

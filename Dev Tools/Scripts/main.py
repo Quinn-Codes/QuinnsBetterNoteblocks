@@ -7,6 +7,15 @@ import commandbuilder
 import os
 import shutil
 
+"""
+The main method for building to the game. This has multiple calls to functions
+in soundbuilder and commandbuilder. You can comment these out to fit your needs.
+For example you only need to build the sound files when you make a change to the
+sound files.
+
+Once finished building, it will export the resourcepack and datapack to the game.
+Make sure you have the directories configured in config.py.
+"""
 def buildToGame():
     # Resource pack methods
     #soundbuilder.build_sound_files()

@@ -18,9 +18,53 @@ In the Scripts folder you should see three other .py files- `main.py`, `commandb
 
 `main.py` makes calls to the other two files in order to build the project- you can comment out these calls to rebuild where changes are needed.
 
-`commandbuilder.py` auto-generates many of the function files in the datapack- particularly each of the files that determines which sound plays when a noteblock is powered. Since there are 8 octaves, 16 instruments, and 12 notes per octave, there are a LOT of combinations to go through, which is why this is auto-generated.
+`commandbuilder.py` auto-generates many of the function files in the datapack- particularly each of the files that determines which sound plays when a noteblock is powered. Since there are 8 octaves, 20 instruments, and 12 notes per octave, there are a LOT of combinations to go through, which is why this is auto-generated.
 
 `soundbuilder.py` auto-generates the assets for the resource pack. In vanilla minecraft, note block sounds are actually played by taking the middle-note of the instrument and pitching it up or down accordingly. Minecraft's sound system can only pitch up/down these files so far, so we have to generate all the possible combinations ahead of time. Each of these original 'middle notes' are stored in `Dev Tools/Assets/Original Sounds`. (it may be possible to only generate the middle note for each octave range and then pitch up/down this note using the /playsound command for each octave range just like minecraft does- I will attempt to make this work at some point. This will greatly reduce the number of files in the resourcepack.)
 
 ## Building Project
 To build the project, simply run the build.bat file. If you configured everything correctly, it should build to the game on the minecraft installation and save that you specified.
+
+## Adding instruments
+This section is a short guide on how to add a new instrument (in the case that new instruments are added to the official game). This is just in case I can't work on the project anymore and someone wants to do some guerilla coding to keep the project updated. There isn't exactly support for adding a custom instrument yet, but it is possible. You'll have to modify a lot more of the existing code.
+
+### Gather Assets / Data
+First, you'll want to go to the [minecraft wiki](https://minecraft.wiki/w/Note_Block) for note blocks and scroll down to the list of instruments. I'll be using the new Weathered Trumpet instrument as an example, as it just came out at the time of writing this. Take note of the octave ranges. For the Weathered Trumpet, its 'F♯2–F♯4'. Now scroll down to the block states section and take note of the value of the instrument you are adding. In my case, it is trumpet_weathered. Finally, head to [mcasset.cloud](mcasset.cloud) to find the instrument sound file you need. This website hosts the raw files for each minecraft version. In my case the file I need is at [mcasset.cloud/26.1/assets/minecraft/sounds/note/trumpet_exposed.ogg](https://mcasset.cloud/26.1/assets/minecraft/sounds/note/trumpet_exposed.ogg).
+
+### Implementation
+Now that we have everything we need, we can finally bring it all together. Head to the config.py in the Scripts folder of this project. Add the instrument to the INSTRUMENTS variable like the others. The name is the instrument name (mine is "trumpet_weathered") and the number is the halfway point between the octave ranges. My octave range is 'F♯2–F♯4' so my number is 3*ₙₒₜₑ. So I will add ```"trumpet_weathered": 3,``` to the INSTRUMENTS variable in the config file.
+
+Take your sound file and rename it. It should be named ```Note_block_instrument.ogg```, or in my case- ```Note_block_trumpet_weathered.ogg```. Now drop it into the ```Dev Tools/Assets/Original Sounds``` folder of this project.
+
+Finally, you should be able to run the build.bat script. Make sure you uncomment the soundbuilder and commandbuilder function calls. You do not need to boost the volume. Enter the game and test your additions! The only thing missing is the texture for the instrument.
+
+*note: This number tells the program what the octave the sound file you downloaded is. This is because minecraft doesn't actually have 25 sound files for every note- there is one sound file for each instrument that is pitched up and down to achieve each note. Since this sound file sits in the middle of the octave range, we need to write that number down. In my case my range is 'F♯2–F♯4' so the middle note (that the sound file should be at) is F♯3, or the number 3. The program will then take this number for that instrument along with the sound file and lower its octave 2 times to get Octave 1 and Octave 2, then it will also increase the octave multiple times to get octaves 4, 5, 6, 7, 8, and 9. You MAY not want to do this though- sometimes instruments with a very low or very high baseline octave can end up sounding bad after being processed. It just depends on the instrument. For example, the didgeridoo has F♯1–F♯3 as its octave range on the wiki. However, the config file in this project has its baseline octave set to 4. This is just because it sounds better. Experiment to figure out what baseline sounds best!
+
+### Texturing
+### Make Texture
+The last step is to add a texture file for the instrument so the better noteblock model can display it properly. In ```Dev Tools/Assets/Blockbench Models/BetterNoteblock``` you can find instrument textures (like instrument_harp.png). Make your own instrument.png file for your instrument- you can use the minecraft_font.png image as a reference for the font. It's important to keep your filenames consistent from now on with the name of the png file you just made. Mine is ```instrument_weattrum.png```.
+
+### Apply Texture
+Copy your instrument texture png file into the resource pack's ```assets\quinnsbetternoteblocks\textures\item\better_noteblock\instruments``` folder. Now, head to ```assets\quinnsbetternoteblocks\models\item\better_noteblock\instruments``` and create a new ```instrument_yourinstrument.json``` file. You can copy/paste from another instrument json file in the folder. Mine looks like
+```
+{
+  "parent": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_null",
+  "textures": {
+    "0": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_weattrum"
+  }
+}
+```
+This should point to the texture file you just made.
+
+Next, head to ```assets\quinnsbetternoteblocks\items\better_noteblock.json``` and find the ```"cases": [``` section. You should see every instrument listed here with some data. Copy/paste one of them and change the data accordingly. For the weathered trumpet example, it looks like
+```
+          {
+            "when": "instrument_weattrum",
+            "model": {
+              "type": "minecraft:model",
+              "model": "quinnsbetternoteblocks:item/better_noteblock/instruments/instrument_weattrum"
+            }
+          },
+```
+
+Finally, we just need to modify a little bit of the datapack's logic so it can link the minecraft note block's instrument to the texture file used by the better noteblock's model. Head to ```QuinnsBetterNoteblocks_datapack\data\quinnsbetternoteblocks\function\storage\set\set_instrument.mcfunction```. You should see one command for each instrument. Copy and paste one, adding your information. For the weathered trumpet, it is ```execute if block ~ ~ ~ minecraft:note_block[instrument=trumpet_weathered] run data modify storage quinnsbetternoteblocks:noteblock_data instrument set value "weattrum"``` Make sure the ```instrument=``` section has the in-game instrument name and the ```set value``` part has the name you gave to your instrument png file from earlier (without the instrument_).

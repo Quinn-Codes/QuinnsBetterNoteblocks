@@ -4,11 +4,11 @@
     "pack_format": 81,
     "supported_formats": {
       "min_inclusive": 61,
-      "max_inclusive": 94
+      "max_inclusive": 101
     },
     "min_format": 61,
     "max_format": [
-      91,
+      101,
       1
     ]
   }

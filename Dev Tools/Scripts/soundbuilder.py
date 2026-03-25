@@ -10,6 +10,13 @@ from config import NOTES
 from config import RP_DIRECTORY
 from config import MAX_OCTAVE
 
+"""
+Builds the sound files used in game, using the vanilla minecraft sound file.
+Achieves this by calculating each note/octave it needs to generate and pitching
+up/down the original file found in Dev Tools/Assets/Original Sounds. Does not
+return anything, but generates files in the Resourcepack's
+assets/quinnsbetternoteblocks/sounds folder.
+"""
 def build_sound_files():
     shifted_notes = ['c', 'csharp', 'd', 'dsharp', 'e', 'f', 'fsharp', 'g', 'gsharp', 'a', 'asharp', 'b']
     # For each instrument...
@@ -55,9 +62,17 @@ def build_sound_files():
 
     print("All samples generated.")
 
+"""
+Used for adjusting the volume of the generated files
 
+Args:
+    folder_path: The folder path to run this function on. (will boost ALL OGG files in the directory)
+    boost_percent: The percentage to boost the volume by
+"""
 def boost_volume(folder_path=os.path.abspath(RP_DIRECTORY), boost_percent=20):
     # Calculate the amplitude factor and convert to dB.
+
+    # Gets every .ogg file in the specified folder
     ogg_files = list(Path(folder_path).rglob("*.ogg"))
     amplitude_factor = 1 + boost_percent / 100.0
     gain_dB = 20 * math.log10(amplitude_factor)
@@ -74,6 +89,14 @@ def boost_volume(folder_path=os.path.abspath(RP_DIRECTORY), boost_percent=20):
         except Exception as e:
             print(f"Error processing {file}: {e}")
 
+"""
+Generates the sound.json file found in the resourcepack's
+assets/quinnsbetternoteblocks folder and the en_us.json language file 
+found in assets/quinnsbetternoteblocks/lang
+
+Args:
+    overwrite: If set to True, will overwrite existing files. You may want to set to False when debugging.
+"""
 # Builds the sound.json file and the en_us.json file (could be expanded to auto-translate en_us to other languages)
 def make_sound_json(overwrite=False):
     # Open the json str
@@ -90,12 +113,16 @@ def make_sound_json(overwrite=False):
                 if(((o == 1) and (n == 'f' or n == 'e' or n == 'dsharp' or n == 'd' or n == 'csharp' or n == 'c')) or ((o == 9) and (n == 'g' or n == 'gsharp' or n == 'a' or n == 'asharp' or n == 'b'))):
                     continue
                 # Build the full sound.json string
-                #soundjson += f"\"{i}.o{o}.{n}\":{{\"category\":\"record\",\"subtitle\":\"subtitles.{i}_o{o}_{n}\",\"sounds\":[\"quinnsbetternoteblocks:{i}/o{o}/{i}_o{o}_{n}\"]}}," ORIGINAL- FOR SEPARATE SUBTITLES
+                # ORIGINAL IMPLEMENTATION- FOR SEPARATE SUBTITLES FOR EACH NOTE ("Harp F#1 plays")
+                #soundjson += f"\"{i}.o{o}.{n}\":{{\"category\":\"record\",\"subtitle\":\"subtitles.{i}_o{o}_{n}\",\"sounds\":[\"quinnsbetternoteblocks:{i}/o{o}/{i}_o{o}_{n}\"]}},"
+                # CURRENT IMPLEMENTATION- FOR A UNIFIED SUBTITLE FOR EACH NOTE ("Better Note Block plays")
                 soundjson += f"\"{i}.o{o}.{n}\":{{\"category\":\"record\",\"subtitle\":\"subtitles.betternoteblockplays\",\"sounds\":[\"quinnsbetternoteblocks:{i}/o{o}/{i}_o{o}_{n}\"]}},"
-                # Create subtitles for all sounds
 
+                # Create subtitles for all sounds
                 sharp = "#" if "sharp" in n else ""
+                # ORIGINAL IMPLEMENTATION- FOR SEPARATE SUBTITLES FOR EACH NOTE ("Harp F#1 plays")
                 #subtitles += f"\"subtitles.{i}_o{o}_{n}\": \"{i.capitalize()} plays {n[0].capitalize()}{sharp}{o}\"," ORIGINAL - FOR SEPARATE SUBTITLES
+                # CURRENT IMPLEMENTATION- FOR A UNIFIED SUBTITLE FOR EACH NOTE ("Better Note Block plays")
                 subtitles += f"\"subtitles.{i}_o{o}_{n}\": \"Better Note Block plays\","
 
     # Strip the trailing comma ,
@@ -108,15 +135,27 @@ def make_sound_json(overwrite=False):
     subtitles += "}"
 
     if(overwrite):
+        # Write the sound.json file
         print("Writing sound.json...")
         with open(os.path.join(RP_DIRECTORY, "assets/quinnsbetternoteblocks", "sounds.json"), "w") as json_file:
             json.dump(json.loads(soundjson), json_file)
 
-        #print("Writing en_us.json...")
-        #with open(os.path.join(RP_DIRECTORY, "assets/quinnsbetternoteblocks/lang", "en_us.json"), "w") as json_file:
-            #json.dump(json.loads(subtitles), json_file)
+        # Write the en_us.json file
+        print("Writing en_us.json...")
+        with open(os.path.join(RP_DIRECTORY, "assets/quinnsbetternoteblocks/lang", "en_us.json"), "w") as json_file:
+            json.dump(json.loads(subtitles), json_file)
 
+"""
+Gets the sample rate of a given file using ffprobe
+Used earlier in development in the debugging process, but may be useful
+for debugging when adding new instruments. (the sample rates need to be the same)
+
+Args:
+    file_path: The file you want to get the sample rate of
+"""
 # Gets the sample rate of a given file using ffprobe
+# Used earlier in development in the debugging process, but may be useful
+# for debugging when adding new instruments. (the sample rates need to be the same)
 def get_sample_rate(file_path):
     result = subprocess.run(
         [
